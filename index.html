@@ -180,6 +180,11 @@
          }
          }
       </style>
+      <script>
+      window.onload = function() {
+        var context = new AudioContext();
+      }
+      </script>
    </head>
    <body>
       <div class="box">
@@ -200,5 +205,24 @@
             <li></li>
          </ol>
       </div>
+      <iframe src="./Reality.mp3" allow="autoplay" id="iframeAudio" style="display:none"></iframe>
+      <div style="display: none;" id="playAudio">
+         <audio controls autoplay loop>
+            <source src="./Reality.mp3" type="audio/mpeg">
+         </audio>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+      </script>
+      <script>
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+          if(!isChrome){
+            $('#iframeAudio').remove()
+          }
+        else{
+           $('#playAudio').remove()
+        }
+      </script>
    </body>
 </html>
