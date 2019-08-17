@@ -180,11 +180,6 @@
          }
          }
       </style>
-      <script>
-      window.onload = function() {
-        var context = new AudioContext();
-      }
-      </script>
    </head>
    <body>
       <div class="box">
@@ -216,13 +211,13 @@
         crossorigin="anonymous">
       </script>
       <script>
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-          if(!isChrome){
+         var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+         if(!isChrome){
             $('#iframeAudio').remove()
-          }
-        else{
+         }
+         else{
            $('#playAudio').remove()
-        }
+         }
       </script>
    </body>
 </html>
